@@ -1,0 +1,98 @@
+duser@8395372068e0:~$ python Conv2DataOld_12-12-18.py 
+Using TensorFlow backend.
+X_train shape: (6057, 227, 227, 3)
+6057 train samples
+1515 test samples
+2018-12-12 16:47:29.941766
+Train on 6057 samples, validate on 1515 samples
+Epoch 1/30
+2018-12-12 16:47:30.228430: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-12-12 16:47:30.628107: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: Tesla V100-DGXS-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:07:00.0
+totalMemory: 31.73GiB freeMemory: 31.05GiB
+2018-12-12 16:47:30.966272: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 1 with properties: 
+name: Tesla V100-DGXS-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:08:00.0
+totalMemory: 31.74GiB freeMemory: 31.32GiB
+2018-12-12 16:47:31.339497: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 2 with properties: 
+name: Tesla V100-DGXS-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:0e:00.0
+totalMemory: 31.74GiB freeMemory: 31.32GiB
+2018-12-12 16:47:31.740888: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 3 with properties: 
+name: Tesla V100-DGXS-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:0f:00.0
+totalMemory: 31.74GiB freeMemory: 31.32GiB
+2018-12-12 16:47:31.740971: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0, 1, 2, 3
+2018-12-12 16:47:32.910211: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-12-12 16:47:32.910254: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 1 2 3 
+2018-12-12 16:47:32.910267: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N Y Y Y 
+2018-12-12 16:47:32.910277: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 1:   Y N Y Y 
+2018-12-12 16:47:32.910286: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 2:   Y Y N Y 
+2018-12-12 16:47:32.910295: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 3:   Y Y Y N 
+2018-12-12 16:47:32.912597: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30126 MB memory) -> physical GPU (device: 0, name: Tesla V100-DGXS-32GB, pci bus id: 0000:07:00.0, compute capability: 7.0)
+2018-12-12 16:47:32.913003: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 30387 MB memory) -> physical GPU (device: 1, name: Tesla V100-DGXS-32GB, pci bus id: 0000:08:00.0, compute capability: 7.0)
+2018-12-12 16:47:32.913335: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 30387 MB memory) -> physical GPU (device: 2, name: Tesla V100-DGXS-32GB, pci bus id: 0000:0e:00.0, compute capability: 7.0)
+2018-12-12 16:47:32.913646: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 30387 MB memory) -> physical GPU (device: 3, name: Tesla V100-DGXS-32GB, pci bus id: 0000:0f:00.0, compute capability: 7.0)
+6057/6057 [==============================] - 15s 2ms/step - loss: 2.2580 - acc: 0.2207 - val_loss: 2.1074 - val_acc: 0.2601
+Epoch 2/30
+6057/6057 [==============================] - 6s 971us/step - loss: 1.9936 - acc: 0.3038 - val_loss: 1.9028 - val_acc: 0.3465
+Epoch 3/30
+6057/6057 [==============================] - 7s 1ms/step - loss: 1.8708 - acc: 0.3441 - val_loss: 1.8418 - val_acc: 0.3828
+Epoch 4/30
+6057/6057 [==============================] - 6s 962us/step - loss: 1.7334 - acc: 0.4005 - val_loss: 1.7355 - val_acc: 0.3960
+Epoch 5/30
+6057/6057 [==============================] - 7s 1ms/step - loss: 1.6388 - acc: 0.4380 - val_loss: 1.6967 - val_acc: 0.4092
+Epoch 6/30
+6057/6057 [==============================] - 6s 1ms/step - loss: 1.5325 - acc: 0.4720 - val_loss: 1.6849 - val_acc: 0.4132
+Epoch 7/30
+6057/6057 [==============================] - 6s 1ms/step - loss: 1.4061 - acc: 0.5222 - val_loss: 1.6679 - val_acc: 0.4152
+Epoch 8/30
+6057/6057 [==============================] - 6s 1ms/step - loss: 1.2887 - acc: 0.5721 - val_loss: 1.7973 - val_acc: 0.3842
+Epoch 9/30
+6057/6057 [==============================] - 7s 1ms/step - loss: 1.1976 - acc: 0.6062 - val_loss: 1.5772 - val_acc: 0.4634
+Epoch 10/30
+6057/6057 [==============================] - 7s 1ms/step - loss: 1.0674 - acc: 0.6520 - val_loss: 1.6505 - val_acc: 0.4376
+Epoch 11/30
+6057/6057 [==============================] - 6s 1ms/step - loss: 0.9769 - acc: 0.6871 - val_loss: 1.5953 - val_acc: 0.4752
+Epoch 12/30
+6057/6057 [==============================] - 6s 1ms/step - loss: 0.8485 - acc: 0.7340 - val_loss: 1.5714 - val_acc: 0.4990
+Epoch 13/30
+6057/6057 [==============================] - 7s 1ms/step - loss: 0.7745 - acc: 0.7591 - val_loss: 1.6583 - val_acc: 0.4805
+Epoch 14/30
+6057/6057 [==============================] - 6s 1ms/step - loss: 0.6614 - acc: 0.8012 - val_loss: 1.6292 - val_acc: 0.4924
+Epoch 15/30
+6057/6057 [==============================] - 6s 1ms/step - loss: 0.5661 - acc: 0.8382 - val_loss: 1.6105 - val_acc: 0.5036
+Epoch 16/30
+6057/6057 [==============================] - 6s 1ms/step - loss: 0.5011 - acc: 0.8590 - val_loss: 1.6722 - val_acc: 0.5135
+Epoch 17/30
+6057/6057 [==============================] - 6s 959us/step - loss: 0.4131 - acc: 0.8914 - val_loss: 1.7555 - val_acc: 0.5096
+Epoch 18/30
+6057/6057 [==============================] - 6s 977us/step - loss: 0.3517 - acc: 0.9079 - val_loss: 1.7100 - val_acc: 0.5129
+Epoch 19/30
+6057/6057 [==============================] - 6s 997us/step - loss: 0.3033 - acc: 0.9275 - val_loss: 1.7246 - val_acc: 0.5320
+Epoch 20/30
+6057/6057 [==============================] - 6s 1ms/step - loss: 0.2284 - acc: 0.9528 - val_loss: 1.9235 - val_acc: 0.5076
+Epoch 21/30
+6057/6057 [==============================] - 6s 1ms/step - loss: 0.1982 - acc: 0.9619 - val_loss: 2.0269 - val_acc: 0.5063
+Epoch 22/30
+6057/6057 [==============================] - 6s 1ms/step - loss: 0.1628 - acc: 0.9747 - val_loss: 1.9079 - val_acc: 0.5340
+Epoch 23/30
+6057/6057 [==============================] - 6s 1ms/step - loss: 0.1236 - acc: 0.9833 - val_loss: 2.0315 - val_acc: 0.5307
+Epoch 24/30
+6057/6057 [==============================] - 6s 1ms/step - loss: 0.0949 - acc: 0.9911 - val_loss: 2.0459 - val_acc: 0.5261
+Epoch 25/30
+6057/6057 [==============================] - 7s 1ms/step - loss: 0.0776 - acc: 0.9932 - val_loss: 2.1033 - val_acc: 0.5287
+Epoch 26/30
+6057/6057 [==============================] - 6s 1ms/step - loss: 0.0607 - acc: 0.9969 - val_loss: 2.0832 - val_acc: 0.5406
+Epoch 27/30
+6057/6057 [==============================] - 6s 1ms/step - loss: 0.0502 - acc: 0.9990 - val_loss: 2.1429 - val_acc: 0.5373
+Epoch 28/30
+6057/6057 [==============================] - 6s 1ms/step - loss: 0.0375 - acc: 0.9987 - val_loss: 2.1776 - val_acc: 0.5360
+Epoch 29/30
+6057/6057 [==============================] - 6s 1ms/step - loss: 0.0303 - acc: 0.9995 - val_loss: 2.2802 - val_acc: 0.5432
+Epoch 30/30
+6057/6057 [==============================] - 6s 1ms/step - loss: 0.0278 - acc: 0.9995 - val_loss: 2.2825 - val_acc: 0.5439
+Test loss: 2.2825207655185915
+Test accuracy: 0.5438943895373014
+2018-12-12 16:50:49.023391

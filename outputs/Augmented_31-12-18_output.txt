@@ -1,0 +1,62 @@
+duser@8395372068e0:~$ python Augmented_31-12-18.py 
+Using TensorFlow backend.
+Anzahl Training Files:
+46740
+Anzahl Validation Files:
+11956
+Shape von immatrix1, 2 und gesamt
+(11685, 154587)
+(35055, 154587)
+(46740, 154587)
+Shape von immatrix_val1, _valrot und gesamt
+(2989, 154587)
+(8967, 154587)
+(11956, 154587)
+Label setzen
+X_train shape: (46740, 227, 227, 3)
+X_test shape: (11956, 227, 227, 3)
+46740 train samples
+11956 test samples
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d_1 (Conv2D)            (None, 55, 55, 96)        34944     
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 27, 27, 96)        0         
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 23, 23, 256)       614656    
+_________________________________________________________________
+max_pooling2d_2 (MaxPooling2 (None, 11, 11, 256)       0         
+_________________________________________________________________
+conv2d_3 (Conv2D)            (None, 9, 9, 384)         885120    
+_________________________________________________________________
+conv2d_4 (Conv2D)            (None, 7, 7, 384)         1327488   
+_________________________________________________________________
+conv2d_5 (Conv2D)            (None, 5, 5, 256)         884992    
+_________________________________________________________________
+max_pooling2d_3 (MaxPooling2 (None, 2, 2, 256)         0         
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 2, 2, 256)         0         
+_________________________________________________________________
+flatten_1 (Flatten)          (None, 1024)              0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 9216)              9446400   
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 9216)              0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 4096)              37752832  
+_________________________________________________________________
+dense_3 (Dense)              (None, 11)                45067     
+=================================================================
+Total params: 50,991,499
+Trainable params: 50,991,499
+Non-trainable params: 0
+_________________________________________________________________
+Traceback (most recent call last):
+  File "Augmented_31-12-18.py", line 248, in <module>
+    datagen_train.fit(X_train)
+  File "/usr/local/lib/python3.6/dist-packages/keras_preprocessing/image.py", line 1363, in fit
+    x = np.copy(x)
+  File "/usr/local/lib/python3.6/dist-packages/numpy/lib/function_base.py", line 733, in copy
+    return array(a, order=order, copy=True)
+MemoryError

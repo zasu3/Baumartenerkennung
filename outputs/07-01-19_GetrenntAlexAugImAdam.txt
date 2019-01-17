@@ -1,0 +1,277 @@
+duser@8395372068e0:~$ python 07-01-19_GetrenntAlexAugImAdam.py 
+Using TensorFlow backend.
+Anzahl Training Files:
+46740
+Anzahl Validation Files:
+11956
+Shape von immatrix1, 2 und gesamt
+(11685, 154587)
+(35055, 154587)
+(46740, 154587)
+Shape von immatrix_val1, _valrot und gesamt
+(2989, 154587)
+(8967, 154587)
+(11956, 154587)
+Label setzen
+X_train shape: (46740, 227, 227, 3)
+X_test shape: (11956, 227, 227, 3)
+46740 train samples
+11956 test samples
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d_1 (Conv2D)            (None, 55, 55, 96)        34944     
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 27, 27, 96)        0         
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 23, 23, 256)       614656    
+_________________________________________________________________
+max_pooling2d_2 (MaxPooling2 (None, 11, 11, 256)       0         
+_________________________________________________________________
+conv2d_3 (Conv2D)            (None, 9, 9, 384)         885120    
+_________________________________________________________________
+conv2d_4 (Conv2D)            (None, 7, 7, 384)         1327488   
+_________________________________________________________________
+conv2d_5 (Conv2D)            (None, 5, 5, 256)         884992    
+_________________________________________________________________
+max_pooling2d_3 (MaxPooling2 (None, 2, 2, 256)         0         
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 2, 2, 256)         0         
+_________________________________________________________________
+flatten_1 (Flatten)          (None, 1024)              0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 9216)              9446400   
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 9216)              0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 4096)              37752832  
+_________________________________________________________________
+dense_3 (Dense)              (None, 11)                45067     
+=================================================================
+Total params: 50,991,499
+Trainable params: 50,991,499
+Non-trainable params: 0
+_________________________________________________________________
+Traceback (most recent call last):
+  File "07-01-19_GetrenntAlexAugImAdam.py", line 256, in <module>
+    optimizer = Adam(lr=0.0001)
+NameError: name 'Adam' is not defined
+duser@8395372068e0:~$ packet_write_wait: Connection to 147.87.124.97 port 22: Broken pipe
+Kamerad-Lappi:~ zes3$ ssh dgxstation
+####################################
+# WARNING: you are about to login  #
+# to a heavily monitored system.   #
+# Behave, obey and enjoy using it. #
+#                                  #
+# If you are unwilling to adhere   # 
+# to these simple rules, quit now! #
+####################################
+
+Last login: Mon Jan  7 08:40:10 2019 from 147.87.242.118
+zumss1@dgxstation:~$ sudo /usr/local/bin/docker_start_test_alpha.sh 8395372068e021105a6500bcc3bd82be44bf630133c01e0732ec02c0435617cb
+python 07-01-19_Getrenvim 07-01-19_GetrenntAlexAugImAdam.py 
+duser@8395372068e0:~$ python 07-01-19_GetrenntAlexAugImAdam.py 
+Using TensorFlow backend.
+Anzahl Training Files:
+46740
+Anzahl Validation Files:
+11956
+Shape von immatrix1, 2 und gesamt
+(11685, 154587)
+(35055, 154587)
+(46740, 154587)
+Shape von immatrix_val1, _valrot und gesamt
+(2989, 154587)
+(8967, 154587)
+(11956, 154587)
+Label setzen
+X_train shape: (46740, 227, 227, 3)
+X_test shape: (11956, 227, 227, 3)
+46740 train samples
+11956 test samples
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d_1 (Conv2D)            (None, 55, 55, 96)        34944     
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 27, 27, 96)        0         
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 23, 23, 256)       614656    
+_________________________________________________________________
+max_pooling2d_2 (MaxPooling2 (None, 11, 11, 256)       0         
+_________________________________________________________________
+conv2d_3 (Conv2D)            (None, 9, 9, 384)         885120    
+_________________________________________________________________
+conv2d_4 (Conv2D)            (None, 7, 7, 384)         1327488   
+_________________________________________________________________
+conv2d_5 (Conv2D)            (None, 5, 5, 256)         884992    
+_________________________________________________________________
+max_pooling2d_3 (MaxPooling2 (None, 2, 2, 256)         0         
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 2, 2, 256)         0         
+_________________________________________________________________
+flatten_1 (Flatten)          (None, 1024)              0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 9216)              9446400   
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 9216)              0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 4096)              37752832  
+_________________________________________________________________
+dense_3 (Dense)              (None, 11)                45067     
+=================================================================
+Total params: 50,991,499
+Trainable params: 50,991,499
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/50
+2019-01-07 10:09:44.914108: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-01-07 10:09:45.368676: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: Tesla V100-DGXS-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:07:00.0
+totalMemory: 31.73GiB freeMemory: 30.74GiB
+2019-01-07 10:09:45.771085: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 1 with properties: 
+name: Tesla V100-DGXS-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:08:00.0
+totalMemory: 31.74GiB freeMemory: 31.32GiB
+2019-01-07 10:09:46.136534: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 2 with properties: 
+name: Tesla V100-DGXS-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:0e:00.0
+totalMemory: 31.74GiB freeMemory: 31.32GiB
+2019-01-07 10:09:46.513566: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 3 with properties: 
+name: Tesla V100-DGXS-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:0f:00.0
+totalMemory: 31.74GiB freeMemory: 31.32GiB
+2019-01-07 10:09:46.513651: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0, 1, 2, 3
+2019-01-07 10:09:47.454291: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-01-07 10:09:47.454334: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 1 2 3 
+2019-01-07 10:09:47.454346: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N Y Y Y 
+2019-01-07 10:09:47.454355: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 1:   Y N Y Y 
+2019-01-07 10:09:47.454363: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 2:   Y Y N Y 
+2019-01-07 10:09:47.454371: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 3:   Y Y Y N 
+2019-01-07 10:09:47.456663: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 29820 MB memory) -> physical GPU (device: 0, name: Tesla V100-DGXS-32GB, pci bus id: 0000:07:00.0, compute capability: 7.0)
+2019-01-07 10:09:47.457078: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 30387 MB memory) -> physical GPU (device: 1, name: Tesla V100-DGXS-32GB, pci bus id: 0000:08:00.0, compute capability: 7.0)
+2019-01-07 10:09:47.457405: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 30387 MB memory) -> physical GPU (device: 2, name: Tesla V100-DGXS-32GB, pci bus id: 0000:0e:00.0, compute capability: 7.0)
+2019-01-07 10:09:47.457707: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 30387 MB memory) -> physical GPU (device: 3, name: Tesla V100-DGXS-32GB, pci bus id: 0000:0f:00.0, compute capability: 7.0)
+468/467 [==============================] - 512s 1s/step - loss: 1.9507 - acc: 0.3005 - val_loss: 2.3842 - val_acc: 0.2058
+Epoch 2/50
+468/467 [==============================] - 505s 1s/step - loss: 1.7030 - acc: 0.3966 - val_loss: 2.4973 - val_acc: 0.2748
+Epoch 3/50
+468/467 [==============================] - 507s 1s/step - loss: 1.5156 - acc: 0.4696 - val_loss: 2.1860 - val_acc: 0.3377
+Epoch 4/50
+468/467 [==============================] - 507s 1s/step - loss: 1.3601 - acc: 0.5257 - val_loss: 2.1421 - val_acc: 0.3501
+Epoch 5/50
+468/467 [==============================] - 507s 1s/step - loss: 1.2526 - acc: 0.5683 - val_loss: 2.2341 - val_acc: 0.3499
+Epoch 6/50
+468/467 [==============================] - 507s 1s/step - loss: 1.1508 - acc: 0.6054 - val_loss: 2.2336 - val_acc: 0.3607
+Epoch 7/50
+468/467 [==============================] - 509s 1s/step - loss: 1.0655 - acc: 0.6346 - val_loss: 2.3500 - val_acc: 0.3458
+Epoch 8/50
+468/467 [==============================] - 507s 1s/step - loss: 0.9849 - acc: 0.6619 - val_loss: 2.3559 - val_acc: 0.3696
+Epoch 9/50
+468/467 [==============================] - 508s 1s/step - loss: 0.9197 - acc: 0.6851 - val_loss: 2.3435 - val_acc: 0.3707
+Epoch 10/50
+468/467 [==============================] - 508s 1s/step - loss: 0.8408 - acc: 0.7121 - val_loss: 2.5607 - val_acc: 0.3786
+Epoch 11/50
+468/467 [==============================] - 508s 1s/step - loss: 0.7920 - acc: 0.7293 - val_loss: 2.3039 - val_acc: 0.4100
+Epoch 12/50
+468/467 [==============================] - 506s 1s/step - loss: 0.7375 - acc: 0.7454 - val_loss: 2.4002 - val_acc: 0.3984
+Epoch 13/50
+468/467 [==============================] - 509s 1s/step - loss: 0.6944 - acc: 0.7597 - val_loss: 2.3867 - val_acc: 0.4108
+Epoch 14/50
+468/467 [==============================] - 509s 1s/step - loss: 0.6445 - acc: 0.7787 - val_loss: 2.3508 - val_acc: 0.4047
+Epoch 15/50
+468/467 [==============================] - 509s 1s/step - loss: 0.6016 - acc: 0.7912 - val_loss: 2.5151 - val_acc: 0.4252
+Epoch 16/50
+468/467 [==============================] - 508s 1s/step - loss: 0.5698 - acc: 0.8030 - val_loss: 2.6662 - val_acc: 0.3844
+Epoch 17/50
+468/467 [==============================] - 508s 1s/step - loss: 0.5373 - acc: 0.8159 - val_loss: 2.4497 - val_acc: 0.4199
+Epoch 18/50
+468/467 [==============================] - 506s 1s/step - loss: 0.5139 - acc: 0.8235 - val_loss: 2.6722 - val_acc: 0.3864
+Epoch 19/50
+468/467 [==============================] - 507s 1s/step - loss: 0.4876 - acc: 0.8318 - val_loss: 2.4648 - val_acc: 0.4331
+Epoch 20/50
+468/467 [==============================] - 506s 1s/step - loss: 0.4678 - acc: 0.8385 - val_loss: 2.5657 - val_acc: 0.4279
+Epoch 21/50
+468/467 [==============================] - 508s 1s/step - loss: 0.4419 - acc: 0.8474 - val_loss: 2.6655 - val_acc: 0.4244
+Epoch 22/50
+468/467 [==============================] - 509s 1s/step - loss: 0.4327 - acc: 0.8500 - val_loss: 2.5985 - val_acc: 0.4278
+Epoch 23/50
+468/467 [==============================] - 508s 1s/step - loss: 0.4050 - acc: 0.8588 - val_loss: 2.6281 - val_acc: 0.4419
+Epoch 24/50
+468/467 [==============================] - 507s 1s/step - loss: 0.3800 - acc: 0.8671 - val_loss: 2.7625 - val_acc: 0.4266
+Epoch 25/50
+468/467 [==============================] - 507s 1s/step - loss: 0.3685 - acc: 0.8726 - val_loss: 2.5802 - val_acc: 0.4473
+Epoch 26/50
+468/467 [==============================] - 507s 1s/step - loss: 0.3551 - acc: 0.8768 - val_loss: 3.0159 - val_acc: 0.4302
+Epoch 27/50
+395/467 [========================>.....] - ETA: 1:17 - loss: 0.3358 - acc: 0.8832packet_write_wait: Connection to 147.87.124.97 port 22: Broken pipe
+Kamerad-Lappi:~ zes3$ ssh dgxstation
+####################################
+# WARNING: you are about to login  #
+# to a heavily monitored system.   #
+# Behave, obey and enjoy using it. #
+#                                  #
+# If you are unwilling to adhere   # 
+# to these simple rules, quit now! #
+####################################
+
+Last login: Mon Jan  7 10:02:15 2019 from 147.87.242.118
+zumss1@dgxstation:~$ sudo /usr/local/bin/docker_start_test_alpha.sh 8395372068e021105a6500bcc3bd82be44bf630133c01e0732ec02c0435617cb
+468/467 [==============================] - 506s 1s/step - loss: 0.2841 - acc: 0.9011 - val_loss: 2.9660 - val_acc: 0.4646
+Epoch 33/50
+468/467 [==============================] - 506s 1s/step - loss: 0.2709 - acc: 0.9048 - val_loss: 2.9735 - val_acc: 0.4456
+Epoch 34/50
+468/467 [==============================] - 507s 1s/step - loss: 0.2649 - acc: 0.9076 - val_loss: 2.8651 - val_acc: 0.4732
+Epoch 35/50
+ 97/467 [=====>........................] - ETA: 6:24 - loss: 0.2515 - acc: 0.9139packet_write_wait: Connection to 147.87.124.97 port 22: Broken pipe
+Kamerad-Lappi:~ zes3$ ssh dgxstation
+####################################
+# WARNING: you are about to login  #
+# to a heavily monitored system.   #
+# Behave, obey and enjoy using it. #
+#                                  #
+# If you are unwilling to adhere   # 
+# to these simple rules, quit now! #
+####################################
+
+Last login: Mon Jan  7 14:37:20 2019 from 147.87.243.101
+zumss1@dgxstation:~$ sudo /usr/local/bin/docker_start_test_alpha.sh 8395372068e021105a6500bcc3bd82be44bf630133c01e0732ec02c0435617cb
+468/467 [==============================] - 508s 1s/step - loss: 0.2454 - acc: 0.9163 - val_loss: 2.8336 - val_acc: 0.4694
+Epoch 37/50
+468/467 [==============================] - 508s 1s/step - loss: 0.2392 - acc: 0.9163 - val_loss: 2.7721 - val_acc: 0.4740
+Epoch 38/50
+468/467 [==============================] - 508s 1s/step - loss: 0.2276 - acc: 0.9213 - val_loss: 3.1532 - val_acc: 0.4655
+Epoch 39/50
+468/467 [==============================] - 507s 1s/step - loss: 0.2263 - acc: 0.9205 - val_loss: 3.0207 - val_acc: 0.4619
+Epoch 40/50
+468/467 [==============================] - 507s 1s/step - loss: 0.2181 - acc: 0.9238 - val_loss: 3.2528 - val_acc: 0.4406
+Epoch 41/50
+468/467 [==============================] - 508s 1s/step - loss: 0.2081 - acc: 0.9276 - val_loss: 3.1714 - val_acc: 0.4572
+Epoch 42/50
+468/467 [==============================] - 506s 1s/step - loss: 0.2062 - acc: 0.9284 - val_loss: 2.9139 - val_acc: 0.4599
+Epoch 43/50
+468/467 [==============================] - 507s 1s/step - loss: 0.2073 - acc: 0.9285 - val_loss: 3.0428 - val_acc: 0.4722
+Epoch 44/50
+468/467 [==============================] - 508s 1s/step - loss: 0.1913 - acc: 0.9331 - val_loss: 3.2096 - val_acc: 0.4542
+Epoch 45/50
+468/467 [==============================] - 509s 1s/step - loss: 0.1842 - acc: 0.9351 - val_loss: 3.3238 - val_acc: 0.4589
+Epoch 46/50
+468/467 [==============================] - 511s 1s/step - loss: 0.1845 - acc: 0.9363 - val_loss: 3.2957 - val_acc: 0.4553
+Epoch 47/50
+468/467 [==============================] - 510s 1s/step - loss: 0.1785 - acc: 0.9382 - val_loss: 3.0965 - val_acc: 0.4761
+Epoch 48/50
+468/467 [==============================] - 510s 1s/step - loss: 0.1795 - acc: 0.9378 - val_loss: 3.2564 - val_acc: 0.4739
+Epoch 49/50
+468/467 [==============================] - 511s 1s/step - loss: 0.1798 - acc: 0.9378 - val_loss: 3.0849 - val_acc: 0.4816
+Epoch 50/50
+468/467 [==============================] - 511s 1s/step - loss: 0.1643 - acc: 0.9429 - val_loss: 3.1611 - val_acc: 0.4703
+Test loss: 3.1610658637015225
+Test accuracy: 0.4703077952293059
+2019-01-07 17:12:58.051834
+on validation data
+11956/11956 [==============================] - 4s 370us/step
+accuaracy 47.03077952293059
+Total loss 316.10658637015223
+Model saved to: 
+07-01-19_GetrenntAlexAugImAdam/07-01-19_GetrenntAlexAugImAdam.hdf5

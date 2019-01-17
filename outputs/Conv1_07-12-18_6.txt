@@ -1,0 +1,73 @@
+duser@8395372068e0:~$ python Conv1_07-12-18_6.py 
+Using TensorFlow backend.
+X_train shape: (11739, 227, 227, 3)
+11739 train samples
+2935 test samples
+2018-12-07 16:14:59.293428
+Train on 11739 samples, validate on 2935 samples
+Epoch 1/15
+2018-12-07 16:14:59.548247: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-12-07 16:14:59.952382: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: Tesla V100-DGXS-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:07:00.0
+totalMemory: 31.73GiB freeMemory: 31.05GiB
+2018-12-07 16:15:00.311017: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 1 with properties: 
+name: Tesla V100-DGXS-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:08:00.0
+totalMemory: 31.74GiB freeMemory: 31.32GiB
+2018-12-07 16:15:00.686222: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 2 with properties: 
+name: Tesla V100-DGXS-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:0e:00.0
+totalMemory: 31.74GiB freeMemory: 31.32GiB
+2018-12-07 16:15:01.057307: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 3 with properties: 
+name: Tesla V100-DGXS-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:0f:00.0
+totalMemory: 31.74GiB freeMemory: 31.32GiB
+2018-12-07 16:15:01.057398: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0, 1, 2, 3
+2018-12-07 16:15:02.083014: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-12-07 16:15:02.083056: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 1 2 3 
+2018-12-07 16:15:02.083068: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N Y Y Y 
+2018-12-07 16:15:02.083077: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 1:   Y N Y Y 
+2018-12-07 16:15:02.083085: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 2:   Y Y N Y 
+2018-12-07 16:15:02.083097: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 3:   Y Y Y N 
+2018-12-07 16:15:02.085431: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30126 MB memory) -> physical GPU (device: 0, name: Tesla V100-DGXS-32GB, pci bus id: 0000:07:00.0, compute capability: 7.0)
+2018-12-07 16:15:02.085834: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 30387 MB memory) -> physical GPU (device: 1, name: Tesla V100-DGXS-32GB, pci bus id: 0000:08:00.0, compute capability: 7.0)
+2018-12-07 16:15:02.086171: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 30387 MB memory) -> physical GPU (device: 2, name: Tesla V100-DGXS-32GB, pci bus id: 0000:0e:00.0, compute capability: 7.0)
+2018-12-07 16:15:02.086495: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 30387 MB memory) -> physical GPU (device: 3, name: Tesla V100-DGXS-32GB, pci bus id: 0000:0f:00.0, compute capability: 7.0)
+11739/11739 [==============================] - 17s 1ms/step - loss: 2.4535 - acc: 0.1948 - val_loss: 2.2084 - val_acc: 0.2170
+Epoch 2/15
+11739/11739 [==============================] - 14s 1ms/step - loss: 2.0955 - acc: 0.2710 - val_loss: 2.0298 - val_acc: 0.3063
+Epoch 3/15
+11739/11739 [==============================] - 10s 814us/step - loss: 1.9434 - acc: 0.3198 - val_loss: 1.9601 - val_acc: 0.3186
+Epoch 4/15
+11739/11739 [==============================] - 13s 1ms/step - loss: 1.8631 - acc: 0.3517 - val_loss: 1.9333 - val_acc: 0.3267
+Epoch 5/15
+11739/11739 [==============================] - 9s 728us/step - loss: 1.7463 - acc: 0.3856 - val_loss: 1.9693 - val_acc: 0.3121
+Epoch 6/15
+11739/11739 [==============================] - 14s 1ms/step - loss: 1.6682 - acc: 0.4267 - val_loss: 1.9612 - val_acc: 0.3281
+Epoch 7/15
+11739/11739 [==============================] - 10s 810us/step - loss: 1.5718 - acc: 0.4660 - val_loss: 1.9703 - val_acc: 0.3298
+Epoch 8/15
+11739/11739 [==============================] - 10s 878us/step - loss: 1.4171 - acc: 0.5206 - val_loss: 2.0312 - val_acc: 0.3114
+Epoch 9/15
+11739/11739 [==============================] - 9s 726us/step - loss: 1.2868 - acc: 0.5713 - val_loss: 2.0768 - val_acc: 0.3104
+Epoch 10/15
+11739/11739 [==============================] - 13s 1ms/step - loss: 1.1179 - acc: 0.6418 - val_loss: 2.1959 - val_acc: 0.2934
+Epoch 11/15
+11739/11739 [==============================] - 10s 818us/step - loss: 0.9201 - acc: 0.7176 - val_loss: 2.3142 - val_acc: 0.2763
+Epoch 12/15
+11739/11739 [==============================] - 10s 857us/step - loss: 0.7332 - acc: 0.7864 - val_loss: 2.5212 - val_acc: 0.2876
+Epoch 13/15
+11739/11739 [==============================] - 10s 814us/step - loss: 0.5457 - acc: 0.8557 - val_loss: 2.6632 - val_acc: 0.2848
+Epoch 14/15
+11739/11739 [==============================] - 10s 817us/step - loss: 0.3993 - acc: 0.9086 - val_loss: 2.8252 - val_acc: 0.2971
+Epoch 15/15
+11739/11739 [==============================] - 10s 815us/step - loss: 0.2940 - acc: 0.9416 - val_loss: 3.0665 - val_acc: 0.2930
+Traceback (most recent call last):
+  File "Conv1_07-12-18_6.py", line 253, in <module>
+    saved_model_path = tf.contrib.saved_model.save_keras_model(model, "./saved_models")
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/contrib/saved_model/python/saved_model/keras_saved_model.py", line 104, in save_keras_model
+    checkpoint_path = _export_model_json_and_variables(model, temp_export_dir)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/contrib/saved_model/python/saved_model/keras_saved_model.py", line 148, in _export_model_json_and_variables
+    model.save_weights(checkpoint_prefix, save_format='tf', overwrite=True)
+TypeError: save_weights() got an unexpected keyword argument 'save_format'

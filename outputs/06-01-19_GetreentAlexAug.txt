@@ -1,0 +1,191 @@
+duser@8395372068e0:~$ python 06-01-19_GetrenntAlexAug.py 
+Using TensorFlow backend.
+Anzahl Training Files:
+46740
+Anzahl Validation Files:
+11956
+Shape von immatrix1, 2 und gesamt
+(11685, 154587)
+(35055, 154587)
+(46740, 154587)
+Shape von immatrix_val1, _valrot und gesamt
+(2989, 154587)
+(8967, 154587)
+(11956, 154587)
+Label setzen
+X_train shape: (46740, 227, 227, 3)
+X_test shape: (11956, 227, 227, 3)
+46740 train samples
+11956 test samples
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d_1 (Conv2D)            (None, 55, 55, 96)        34944     
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 27, 27, 96)        0         
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 23, 23, 256)       614656    
+_________________________________________________________________
+max_pooling2d_2 (MaxPooling2 (None, 11, 11, 256)       0         
+_________________________________________________________________
+conv2d_3 (Conv2D)            (None, 9, 9, 384)         885120    
+_________________________________________________________________
+conv2d_4 (Conv2D)            (None, 7, 7, 384)         1327488   
+_________________________________________________________________
+conv2d_5 (Conv2D)            (None, 5, 5, 256)         884992    
+_________________________________________________________________
+max_pooling2d_3 (MaxPooling2 (None, 2, 2, 256)         0         
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 2, 2, 256)         0         
+_________________________________________________________________
+flatten_1 (Flatten)          (None, 1024)              0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 9216)              9446400   
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 9216)              0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 4096)              37752832  
+_________________________________________________________________
+dense_3 (Dense)              (None, 11)                45067     
+=================================================================
+Total params: 50,991,499
+Trainable params: 50,991,499
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/50
+2019-01-06 20:29:39.480957: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-01-06 20:29:39.930143: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: Tesla V100-DGXS-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:07:00.0
+totalMemory: 31.73GiB freeMemory: 30.74GiB
+2019-01-06 20:29:40.333840: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 1 with properties: 
+name: Tesla V100-DGXS-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:08:00.0
+totalMemory: 31.74GiB freeMemory: 31.32GiB
+2019-01-06 20:29:40.712183: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 2 with properties: 
+name: Tesla V100-DGXS-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:0e:00.0
+totalMemory: 31.74GiB freeMemory: 31.32GiB
+2019-01-06 20:29:41.094230: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 3 with properties: 
+name: Tesla V100-DGXS-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:0f:00.0
+totalMemory: 31.74GiB freeMemory: 31.32GiB
+2019-01-06 20:29:41.094328: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0, 1, 2, 3
+2019-01-06 20:29:42.037760: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-01-06 20:29:42.037805: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 1 2 3 
+2019-01-06 20:29:42.037819: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N Y Y Y 
+2019-01-06 20:29:42.037832: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 1:   Y N Y Y 
+2019-01-06 20:29:42.037844: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 2:   Y Y N Y 
+2019-01-06 20:29:42.037857: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 3:   Y Y Y N 
+2019-01-06 20:29:42.040165: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 29820 MB memory) -> physical GPU (device: 0, name: Tesla V100-DGXS-32GB, pci bus id: 0000:07:00.0, compute capability: 7.0)
+2019-01-06 20:29:42.040615: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 30387 MB memory) -> physical GPU (device: 1, name: Tesla V100-DGXS-32GB, pci bus id: 0000:08:00.0, compute capability: 7.0)
+2019-01-06 20:29:42.040994: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 30387 MB memory) -> physical GPU (device: 2, name: Tesla V100-DGXS-32GB, pci bus id: 0000:0e:00.0, compute capability: 7.0)
+2019-01-06 20:29:42.041359: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 30387 MB memory) -> physical GPU (device: 3, name: Tesla V100-DGXS-32GB, pci bus id: 0000:0f:00.0, compute capability: 7.0)
+468/467 [==============================] - 494s 1s/step - loss: 1.9522 - acc: 0.3017 - val_loss: 2.4254 - val_acc: 0.2238
+Epoch 2/50
+468/467 [==============================] - 488s 1s/step - loss: 1.6622 - acc: 0.4163 - val_loss: 2.2963 - val_acc: 0.2809
+Epoch 3/50
+468/467 [==============================] - 489s 1s/step - loss: 1.4751 - acc: 0.4842 - val_loss: 2.0653 - val_acc: 0.3287
+Epoch 4/50
+468/467 [==============================] - 488s 1s/step - loss: 1.3353 - acc: 0.5350 - val_loss: 2.3930 - val_acc: 0.3058
+Epoch 5/50
+468/467 [==============================] - 487s 1s/step - loss: 1.2243 - acc: 0.5770 - val_loss: 2.3883 - val_acc: 0.3494
+Epoch 6/50
+468/467 [==============================] - 487s 1s/step - loss: 1.1178 - acc: 0.6154 - val_loss: 2.4802 - val_acc: 0.3241
+Epoch 7/50
+468/467 [==============================] - 488s 1s/step - loss: 1.0199 - acc: 0.6504 - val_loss: 2.2926 - val_acc: 0.3591
+Epoch 8/50
+468/467 [==============================] - 487s 1s/step - loss: 0.9552 - acc: 0.6727 - val_loss: 2.4263 - val_acc: 0.3653
+Epoch 9/50
+468/467 [==============================] - 488s 1s/step - loss: 0.8771 - acc: 0.7010 - val_loss: 2.3207 - val_acc: 0.3647
+Epoch 10/50
+468/467 [==============================] - 487s 1s/step - loss: 0.8125 - acc: 0.7244 - val_loss: 2.4334 - val_acc: 0.3966
+Epoch 11/50
+468/467 [==============================] - 487s 1s/step - loss: 0.7425 - acc: 0.7475 - val_loss: 2.3219 - val_acc: 0.3944
+Epoch 12/50
+468/467 [==============================] - 487s 1s/step - loss: 0.6887 - acc: 0.7642 - val_loss: 2.4416 - val_acc: 0.3989
+Epoch 13/50
+468/467 [==============================] - 487s 1s/step - loss: 0.6441 - acc: 0.7800 - val_loss: 2.4305 - val_acc: 0.4011
+Epoch 14/50
+468/467 [==============================] - 488s 1s/step - loss: 0.6010 - acc: 0.7940 - val_loss: 2.4508 - val_acc: 0.4186
+Epoch 15/50
+468/467 [==============================] - 490s 1s/step - loss: 0.5688 - acc: 0.8043 - val_loss: 2.5082 - val_acc: 0.4253
+Epoch 16/50
+468/467 [==============================] - 489s 1s/step - loss: 0.5336 - acc: 0.8153 - val_loss: 2.4821 - val_acc: 0.4161
+Epoch 17/50
+468/467 [==============================] - 489s 1s/step - loss: 0.5051 - acc: 0.8245 - val_loss: 2.6318 - val_acc: 0.4166
+Epoch 18/50
+468/467 [==============================] - 489s 1s/step - loss: 0.4706 - acc: 0.8371 - val_loss: 2.5736 - val_acc: 0.4159
+Epoch 19/50
+468/467 [==============================] - 488s 1s/step - loss: 0.4515 - acc: 0.8439 - val_loss: 2.8107 - val_acc: 0.4119
+Epoch 20/50
+468/467 [==============================] - 488s 1s/step - loss: 0.4252 - acc: 0.8531 - val_loss: 2.7506 - val_acc: 0.4195
+Epoch 21/50
+468/467 [==============================] - 488s 1s/step - loss: 0.4019 - acc: 0.8611 - val_loss: 2.7885 - val_acc: 0.4117
+Epoch 22/50
+468/467 [==============================] - 487s 1s/step - loss: 0.3868 - acc: 0.8656 - val_loss: 2.5865 - val_acc: 0.4455
+Epoch 23/50
+468/467 [==============================] - 487s 1s/step - loss: 0.3708 - acc: 0.8713 - val_loss: 2.6499 - val_acc: 0.4323
+Epoch 24/50
+468/467 [==============================] - 487s 1s/step - loss: 0.3524 - acc: 0.8761 - val_loss: 2.5545 - val_acc: 0.4553
+Epoch 25/50
+468/467 [==============================] - 488s 1s/step - loss: 0.3300 - acc: 0.8848 - val_loss: 2.7799 - val_acc: 0.4542
+Epoch 26/50
+468/467 [==============================] - 487s 1s/step - loss: 0.3109 - acc: 0.8913 - val_loss: 2.8840 - val_acc: 0.4291
+Epoch 27/50
+468/467 [==============================] - 487s 1s/step - loss: 0.3081 - acc: 0.8930 - val_loss: 2.9067 - val_acc: 0.4387
+Epoch 28/50
+468/467 [==============================] - 488s 1s/step - loss: 0.2878 - acc: 0.9018 - val_loss: 2.9411 - val_acc: 0.4427
+Epoch 29/50
+468/467 [==============================] - 488s 1s/step - loss: 0.2777 - acc: 0.9028 - val_loss: 2.8964 - val_acc: 0.4494
+Epoch 30/50
+468/467 [==============================] - 487s 1s/step - loss: 0.2696 - acc: 0.9073 - val_loss: 2.8848 - val_acc: 0.4537
+Epoch 31/50
+468/467 [==============================] - 488s 1s/step - loss: 0.2628 - acc: 0.9078 - val_loss: 3.0135 - val_acc: 0.4367
+Epoch 32/50
+468/467 [==============================] - 488s 1s/step - loss: 0.2526 - acc: 0.9115 - val_loss: 2.9630 - val_acc: 0.4430
+Epoch 33/50
+468/467 [==============================] - 490s 1s/step - loss: 0.2398 - acc: 0.9172 - val_loss: 3.1332 - val_acc: 0.4272
+Epoch 34/50
+468/467 [==============================] - 488s 1s/step - loss: 0.2375 - acc: 0.9172 - val_loss: 2.8812 - val_acc: 0.4735
+Epoch 35/50
+468/467 [==============================] - 487s 1s/step - loss: 0.2316 - acc: 0.9198 - val_loss: 3.1732 - val_acc: 0.4481
+Epoch 36/50
+468/467 [==============================] - 488s 1s/step - loss: 0.2208 - acc: 0.9211 - val_loss: 3.0772 - val_acc: 0.4360
+Epoch 37/50
+468/467 [==============================] - 488s 1s/step - loss: 0.2127 - acc: 0.9250 - val_loss: 3.3684 - val_acc: 0.4309
+Epoch 38/50
+468/467 [==============================] - 488s 1s/step - loss: 0.2065 - acc: 0.9299 - val_loss: 3.2214 - val_acc: 0.4425
+Epoch 39/50
+468/467 [==============================] - 488s 1s/step - loss: 0.1950 - acc: 0.9330 - val_loss: 3.1819 - val_acc: 0.4492
+Epoch 40/50
+468/467 [==============================] - 489s 1s/step - loss: 0.1922 - acc: 0.9335 - val_loss: 3.3450 - val_acc: 0.4247
+Epoch 41/50
+468/467 [==============================] - 488s 1s/step - loss: 0.1932 - acc: 0.9324 - val_loss: 3.3763 - val_acc: 0.4486
+Epoch 42/50
+468/467 [==============================] - 489s 1s/step - loss: 0.1845 - acc: 0.9360 - val_loss: 3.1856 - val_acc: 0.4379
+Epoch 43/50
+468/467 [==============================] - 489s 1s/step - loss: 0.1757 - acc: 0.9387 - val_loss: 3.2826 - val_acc: 0.4589
+Epoch 44/50
+468/467 [==============================] - 488s 1s/step - loss: 0.1739 - acc: 0.9391 - val_loss: 3.2261 - val_acc: 0.4569
+Epoch 45/50
+468/467 [==============================] - 488s 1s/step - loss: 0.1735 - acc: 0.9402 - val_loss: 3.4658 - val_acc: 0.4374
+Epoch 46/50
+468/467 [==============================] - 489s 1s/step - loss: 0.1757 - acc: 0.9398 - val_loss: 3.2155 - val_acc: 0.4665
+Epoch 47/50
+468/467 [==============================] - 489s 1s/step - loss: 0.1647 - acc: 0.9427 - val_loss: 3.1624 - val_acc: 0.4564
+Epoch 48/50
+468/467 [==============================] - 488s 1s/step - loss: 0.1570 - acc: 0.9455 - val_loss: 3.0064 - val_acc: 0.4640
+Epoch 49/50
+468/467 [==============================] - 488s 1s/step - loss: 0.1533 - acc: 0.9465 - val_loss: 3.3689 - val_acc: 0.4550
+Epoch 50/50
+468/467 [==============================] - 488s 1s/step - loss: 0.1557 - acc: 0.9457 - val_loss: 3.7066 - val_acc: 0.4221
+Test loss: 3.706628296916881
+Test accuracy: 0.42213114755095427
+2019-01-07 03:16:29.616318
+on validation data
+11956/11956 [==============================] - 4s 360us/step
+accuaracy 42.213114755095425
+Total loss 370.6628296916881
+Model saved to: 
+06-01-19_GetrenntAlexAug/06-01-19_GetrenntAlexAug.hdf5

@@ -1,0 +1,109 @@
+duser@8395372068e0:~$ python Conv1_07-12-18_2.py 
+Using TensorFlow backend.
+X_train shape: (11739, 227, 227, 3)
+11739 train samples
+2935 test samples
+2018-12-07 14:46:00.614113
+Train on 11739 samples, validate on 2935 samples
+Epoch 1/15
+2018-12-07 14:46:00.873946: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-12-07 14:46:01.255157: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: Tesla V100-DGXS-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:07:00.0
+totalMemory: 31.73GiB freeMemory: 31.05GiB
+2018-12-07 14:46:01.606069: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 1 with properties: 
+name: Tesla V100-DGXS-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:08:00.0
+totalMemory: 31.74GiB freeMemory: 31.32GiB
+2018-12-07 14:46:01.990282: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 2 with properties: 
+name: Tesla V100-DGXS-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:0e:00.0
+totalMemory: 31.74GiB freeMemory: 31.32GiB
+2018-12-07 14:46:02.363799: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 3 with properties: 
+name: Tesla V100-DGXS-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:0f:00.0
+totalMemory: 31.74GiB freeMemory: 31.32GiB
+2018-12-07 14:46:02.363884: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0, 1, 2, 3
+2018-12-07 14:46:03.384422: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-12-07 14:46:03.384464: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 1 2 3 
+2018-12-07 14:46:03.384476: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N Y Y Y 
+2018-12-07 14:46:03.384484: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 1:   Y N Y Y 
+2018-12-07 14:46:03.384492: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 2:   Y Y N Y 
+2018-12-07 14:46:03.384500: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 3:   Y Y Y N 
+2018-12-07 14:46:03.386789: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30126 MB memory) -> physical GPU (device: 0, name: Tesla V100-DGXS-32GB, pci bus id: 0000:07:00.0, compute capability: 7.0)
+2018-12-07 14:46:03.387207: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 30387 MB memory) -> physical GPU (device: 1, name: Tesla V100-DGXS-32GB, pci bus id: 0000:08:00.0, compute capability: 7.0)
+2018-12-07 14:46:03.387562: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 30387 MB memory) -> physical GPU (device: 2, name: Tesla V100-DGXS-32GB, pci bus id: 0000:0e:00.0, compute capability: 7.0)
+2018-12-07 14:46:03.387884: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 30387 MB memory) -> physical GPU (device: 3, name: Tesla V100-DGXS-32GB, pci bus id: 0000:0f:00.0, compute capability: 7.0)
+11739/11739 [==============================] - 14s 1ms/step - loss: 2.5802 - acc: 0.2027 - val_loss: 2.4298 - val_acc: 0.1802
+Epoch 2/15
+11739/11739 [==============================] - 15s 1ms/step - loss: 2.1468 - acc: 0.2246 - val_loss: 2.0804 - val_acc: 0.2542
+Epoch 3/15
+11739/11739 [==============================] - 17s 1ms/step - loss: 1.9780 - acc: 0.3058 - val_loss: 2.0109 - val_acc: 0.3193
+Epoch 4/15
+11739/11739 [==============================] - 16s 1ms/step - loss: 1.8422 - acc: 0.3631 - val_loss: 2.0231 - val_acc: 0.3002
+Epoch 5/15
+11739/11739 [==============================] - 17s 1ms/step - loss: 1.7078 - acc: 0.4165 - val_loss: 1.9766 - val_acc: 0.3315
+Epoch 6/15
+11739/11739 [==============================] - 16s 1ms/step - loss: 1.5779 - acc: 0.4695 - val_loss: 2.0060 - val_acc: 0.3233
+Epoch 7/15
+11739/11739 [==============================] - 16s 1ms/step - loss: 1.4146 - acc: 0.5249 - val_loss: 2.0829 - val_acc: 0.3148
+Epoch 8/15
+11739/11739 [==============================] - 16s 1ms/step - loss: 1.2979 - acc: 0.5691 - val_loss: 2.0398 - val_acc: 0.3431
+Epoch 9/15
+11739/11739 [==============================] - 16s 1ms/step - loss: 1.1305 - acc: 0.6335 - val_loss: 2.0943 - val_acc: 0.3373
+Epoch 10/15
+11739/11739 [==============================] - 17s 1ms/step - loss: 1.0140 - acc: 0.6835 - val_loss: 2.1817 - val_acc: 0.3203
+Epoch 11/15
+11739/11739 [==============================] - 17s 1ms/step - loss: 0.8626 - acc: 0.7416 - val_loss: 2.3420 - val_acc: 0.3152
+Epoch 12/15
+11739/11739 [==============================] - 15s 1ms/step - loss: 0.7611 - acc: 0.7743 - val_loss: 2.4436 - val_acc: 0.3158
+Epoch 13/15
+11739/11739 [==============================] - 16s 1ms/step - loss: 0.6463 - acc: 0.8230 - val_loss: 2.5648 - val_acc: 0.3107
+Epoch 14/15
+11739/11739 [==============================] - 17s 1ms/step - loss: 0.5607 - acc: 0.8499 - val_loss: 2.7091 - val_acc: 0.3036
+Epoch 15/15
+11739/11739 [==============================] - 16s 1ms/step - loss: 0.4667 - acc: 0.8852 - val_loss: 2.7960 - val_acc: 0.3196
+2018-12-07 14:50:01.995475: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0, 1, 2, 3
+2018-12-07 14:50:01.995551: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-12-07 14:50:01.995566: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 1 2 3 
+2018-12-07 14:50:01.995576: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N Y Y Y 
+2018-12-07 14:50:01.995584: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 1:   Y N Y Y 
+2018-12-07 14:50:01.995593: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 2:   Y Y N Y 
+2018-12-07 14:50:01.995601: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 3:   Y Y Y N 
+2018-12-07 14:50:01.997518: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30126 MB memory) -> physical GPU (device: 0, name: Tesla V100-DGXS-32GB, pci bus id: 0000:07:00.0, compute capability: 7.0)
+2018-12-07 14:50:01.997701: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 30387 MB memory) -> physical GPU (device: 1, name: Tesla V100-DGXS-32GB, pci bus id: 0000:08:00.0, compute capability: 7.0)
+2018-12-07 14:50:01.997940: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 30387 MB memory) -> physical GPU (device: 2, name: Tesla V100-DGXS-32GB, pci bus id: 0000:0e:00.0, compute capability: 7.0)
+2018-12-07 14:50:01.998080: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 30387 MB memory) -> physical GPU (device: 3, name: Tesla V100-DGXS-32GB, pci bus id: 0000:0f:00.0, compute capability: 7.0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py", line 1334, in _do_call
+    return fn(*args)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py", line 1319, in _run_fn
+    options, feed_dict, fetch_list, target_list, run_metadata)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py", line 1407, in _call_tf_sessionrun
+    run_metadata)
+tensorflow.python.framework.errors_impl.FailedPreconditionError: Attempting to use uninitialized value conv2d_1/bias
+	 [[{{node conv2d_1/bias/_0}} = _Send[T=DT_FLOAT, client_terminated=false, recv_device="/job:localhost/replica:0/task:0/device:CPU:0", send_device="/job:localhost/replica:0/task:0/device:GPU:0", send_device_incarnation=1, tensor_name="edge_6_conv2d_1/bias", _device="/job:localhost/replica:0/task:0/device:GPU:0"](conv2d_1/bias)]]
+	 [[{{node conv2d_1/bias/_1}} = _Recv[_start_time=0, client_terminated=false, recv_device="/job:localhost/replica:0/task:0/device:CPU:0", send_device="/job:localhost/replica:0/task:0/device:GPU:0", send_device_incarnation=1, tensor_name="edge_6_conv2d_1/bias", tensor_type=DT_FLOAT, _device="/job:localhost/replica:0/task:0/device:CPU:0"]()]]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "Conv1_07-12-18_2.py", line 253, in <module>
+    tf.keras.models.save_model(model, '07-12-18_Conv1_15epochs.h5', overwrite=True, include_optimizer=True)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/keras/engine/saving.py", line 107, in save_model
+    save_weights_to_hdf5_group(model_weights_group, model_layers)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/keras/engine/saving.py", line 728, in save_weights_to_hdf5_group
+    weight_values = K.batch_get_value(symbolic_weights)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/keras/backend.py", line 2725, in batch_get_value
+    return get_session().run(tensors)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py", line 929, in run
+    run_metadata_ptr)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py", line 1152, in _run
+    feed_dict_tensor, options, run_metadata)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py", line 1328, in _do_run
+    run_metadata)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py", line 1348, in _do_call
+    raise type(e)(node_def, op, message)
+tensorflow.python.framework.errors_impl.FailedPreconditionError: Attempting to use uninitialized value conv2d_1/bias
+	 [[{{node conv2d_1/bias/_0}} = _Send[T=DT_FLOAT, client_terminated=false, recv_device="/job:localhost/replica:0/task:0/device:CPU:0", send_device="/job:localhost/replica:0/task:0/device:GPU:0", send_device_incarnation=1, tensor_name="edge_6_conv2d_1/bias", _device="/job:localhost/replica:0/task:0/device:GPU:0"](conv2d_1/bias)]]
+	 [[{{node conv2d_1/bias/_1}} = _Recv[_start_time=0, client_terminated=false, recv_device="/job:localhost/replica:0/task:0/device:CPU:0", send_device="/job:localhost/replica:0/task:0/device:GPU:0", send_device_incarnation=1, tensor_name="edge_6_conv2d_1/bias", tensor_type=DT_FLOAT, _device="/job:localhost/replica:0/task:0/device:CPU:0"]()]]

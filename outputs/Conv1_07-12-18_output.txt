@@ -1,0 +1,69 @@
+duser@8395372068e0:~$ python Conv1_07-12-18.py 
+Using TensorFlow backend.
+X_train shape: (11739, 227, 227, 3)
+11739 train samples
+2935 test samples
+2018-12-07 14:27:03.903366
+Train on 11739 samples, validate on 2935 samples
+Epoch 1/15
+2018-12-07 14:27:04.161218: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-12-07 14:27:04.573642: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: Tesla V100-DGXS-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:07:00.0
+totalMemory: 31.73GiB freeMemory: 31.05GiB
+2018-12-07 14:27:04.932620: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 1 with properties: 
+name: Tesla V100-DGXS-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:08:00.0
+totalMemory: 31.74GiB freeMemory: 31.32GiB
+2018-12-07 14:27:05.292273: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 2 with properties: 
+name: Tesla V100-DGXS-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:0e:00.0
+totalMemory: 31.74GiB freeMemory: 31.32GiB
+2018-12-07 14:27:05.712409: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 3 with properties: 
+name: Tesla V100-DGXS-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:0f:00.0
+totalMemory: 31.74GiB freeMemory: 31.32GiB
+2018-12-07 14:27:05.712491: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0, 1, 2, 3
+2018-12-07 14:27:06.732305: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-12-07 14:27:06.732348: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 1 2 3 
+2018-12-07 14:27:06.732359: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N Y Y Y 
+2018-12-07 14:27:06.732368: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 1:   Y N Y Y 
+2018-12-07 14:27:06.732376: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 2:   Y Y N Y 
+2018-12-07 14:27:06.732384: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 3:   Y Y Y N 
+2018-12-07 14:27:06.734696: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30126 MB memory) -> physical GPU (device: 0, name: Tesla V100-DGXS-32GB, pci bus id: 0000:07:00.0, compute capability: 7.0)
+2018-12-07 14:27:06.735125: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 30387 MB memory) -> physical GPU (device: 1, name: Tesla V100-DGXS-32GB, pci bus id: 0000:08:00.0, compute capability: 7.0)
+2018-12-07 14:27:06.735472: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 30387 MB memory) -> physical GPU (device: 2, name: Tesla V100-DGXS-32GB, pci bus id: 0000:0e:00.0, compute capability: 7.0)
+2018-12-07 14:27:06.735798: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 30387 MB memory) -> physical GPU (device: 3, name: Tesla V100-DGXS-32GB, pci bus id: 0000:0f:00.0, compute capability: 7.0)
+11739/11739 [==============================] - 19s 2ms/step - loss: 2.3954 - acc: 0.1722 - val_loss: 2.2653 - val_acc: 0.1629
+Epoch 2/15
+11739/11739 [==============================] - 14s 1ms/step - loss: 2.2062 - acc: 0.1846 - val_loss: 2.2053 - val_acc: 0.1973
+Epoch 3/15
+11739/11739 [==============================] - 15s 1ms/step - loss: 2.0995 - acc: 0.2510 - val_loss: 2.1744 - val_acc: 0.2201
+Epoch 4/15
+11739/11739 [==============================] - 18s 2ms/step - loss: 1.8962 - acc: 0.3465 - val_loss: 2.1981 - val_acc: 0.2245
+Epoch 5/15
+11739/11739 [==============================] - 17s 1ms/step - loss: 1.6735 - acc: 0.4360 - val_loss: 2.3417 - val_acc: 0.2181
+Epoch 6/15
+11739/11739 [==============================] - 18s 2ms/step - loss: 1.4524 - acc: 0.5214 - val_loss: 2.3836 - val_acc: 0.2126
+Epoch 7/15
+11739/11739 [==============================] - 18s 2ms/step - loss: 1.1947 - acc: 0.6222 - val_loss: 2.6104 - val_acc: 0.2037
+Epoch 8/15
+11739/11739 [==============================] - 16s 1ms/step - loss: 0.9334 - acc: 0.7248 - val_loss: 2.7950 - val_acc: 0.2048
+Epoch 9/15
+11739/11739 [==============================] - 14s 1ms/step - loss: 0.6821 - acc: 0.8140 - val_loss: 3.0675 - val_acc: 0.2225
+Epoch 10/15
+11739/11739 [==============================] - 18s 2ms/step - loss: 0.4829 - acc: 0.8853 - val_loss: 3.3879 - val_acc: 0.2242
+Epoch 11/15
+11739/11739 [==============================] - 18s 2ms/step - loss: 0.3165 - acc: 0.9370 - val_loss: 3.6565 - val_acc: 0.2225
+Epoch 12/15
+11739/11739 [==============================] - 17s 1ms/step - loss: 0.1932 - acc: 0.9725 - val_loss: 3.9748 - val_acc: 0.2232
+Epoch 13/15
+11739/11739 [==============================] - 17s 1ms/step - loss: 0.1120 - acc: 0.9906 - val_loss: 4.4107 - val_acc: 0.2211
+Epoch 14/15
+11739/11739 [==============================] - 18s 2ms/step - loss: 0.0644 - acc: 0.9980 - val_loss: 4.5284 - val_acc: 0.2256
+Epoch 15/15
+11739/11739 [==============================] - 18s 2ms/step - loss: 0.0378 - acc: 0.9993 - val_loss: 4.7523 - val_acc: 0.2225
+Traceback (most recent call last):
+  File "Conv1_07-12-18.py", line 252, in <module>
+    tf.keras.models.save_model('07-12-18_Conv1_15epochs.h5')
+TypeError: save_model() missing 1 required positional argument: 'filepath'

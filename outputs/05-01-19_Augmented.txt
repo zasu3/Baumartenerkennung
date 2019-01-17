@@ -1,0 +1,169 @@
+duser@8395372068e0:~$ python 05-01-19_Augmented.py
+Using TensorFlow backend.
+Shape von immatrix1, 2 und gesamt
+(35055, 154587)
+(35055, 154587)
+Shape von immatrix_val1, _valrot und gesamt
+(8967, 154587)
+(8967, 154587)
+Label setzen
+X_train shape: (35055, 227, 227, 3)
+X_test shape: (8967, 227, 227, 3)
+35055 train samples
+8967 test samples
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d_1 (Conv2D)            (None, 55, 55, 96)        34944     
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 27, 27, 96)        0         
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 23, 23, 256)       614656    
+_________________________________________________________________
+max_pooling2d_2 (MaxPooling2 (None, 11, 11, 256)       0         
+_________________________________________________________________
+conv2d_3 (Conv2D)            (None, 9, 9, 384)         885120    
+_________________________________________________________________
+conv2d_4 (Conv2D)            (None, 7, 7, 384)         1327488   
+_________________________________________________________________
+conv2d_5 (Conv2D)            (None, 5, 5, 256)         884992    
+_________________________________________________________________
+max_pooling2d_3 (MaxPooling2 (None, 2, 2, 256)         0         
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 2, 2, 256)         0         
+_________________________________________________________________
+flatten_1 (Flatten)          (None, 1024)              0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 9216)              9446400   
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 9216)              0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 4096)              37752832  
+_________________________________________________________________
+dense_3 (Dense)              (None, 11)                45067     
+=================================================================
+Total params: 50,991,499
+Trainable params: 50,991,499
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/50
+2019-01-05 16:47:32.067237: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-01-05 16:47:32.509829: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: Tesla V100-DGXS-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:07:00.0
+totalMemory: 31.73GiB freeMemory: 30.74GiB
+2019-01-05 16:47:32.869024: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 1 with properties: 
+name: Tesla V100-DGXS-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:08:00.0
+totalMemory: 31.74GiB freeMemory: 31.32GiB
+2019-01-05 16:47:33.243317: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 2 with properties: 
+name: Tesla V100-DGXS-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:0e:00.0
+totalMemory: 31.74GiB freeMemory: 31.32GiB
+2019-01-05 16:47:33.607041: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 3 with properties: 
+name: Tesla V100-DGXS-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:0f:00.0
+totalMemory: 31.74GiB freeMemory: 31.32GiB
+2019-01-05 16:47:33.607126: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0, 1, 2, 3
+2019-01-05 16:47:34.547110: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-01-05 16:47:34.547152: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 1 2 3 
+2019-01-05 16:47:34.547164: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N Y Y Y 
+2019-01-05 16:47:34.547173: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 1:   Y N Y Y 
+2019-01-05 16:47:34.547181: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 2:   Y Y N Y 
+2019-01-05 16:47:34.547188: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 3:   Y Y Y N 
+2019-01-05 16:47:34.549480: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 29820 MB memory) -> physical GPU (device: 0, name: Tesla V100-DGXS-32GB, pci bus id: 0000:07:00.0, compute capability: 7.0)
+2019-01-05 16:47:34.549910: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 30387 MB memory) -> physical GPU (device: 1, name: Tesla V100-DGXS-32GB, pci bus id: 0000:08:00.0, compute capability: 7.0)
+2019-01-05 16:47:34.550247: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 30387 MB memory) -> physical GPU (device: 2, name: Tesla V100-DGXS-32GB, pci bus id: 0000:0e:00.0, compute capability: 7.0)
+2019-01-05 16:47:34.550542: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 30387 MB memory) -> physical GPU (device: 3, name: Tesla V100-DGXS-32GB, pci bus id: 0000:0f:00.0, compute capability: 7.0)
+351/350 [==============================] - 34s 97ms/step - loss: 1.9645 - acc: 0.2946 - val_loss: 2.2864 - val_acc: 0.2379
+Epoch 2/50
+351/350 [==============================] - 27s 77ms/step - loss: 1.7319 - acc: 0.3841 - val_loss: 2.1677 - val_acc: 0.2923
+Epoch 3/50
+351/350 [==============================] - 27s 77ms/step - loss: 1.5549 - acc: 0.4555 - val_loss: 2.2043 - val_acc: 0.3171
+Epoch 4/50
+351/350 [==============================] - 27s 77ms/step - loss: 1.4236 - acc: 0.5011 - val_loss: 2.2658 - val_acc: 0.3295
+Epoch 5/50
+351/350 [==============================] - 27s 77ms/step - loss: 1.2903 - acc: 0.5503 - val_loss: 2.1525 - val_acc: 0.3401
+Epoch 6/50
+351/350 [==============================] - 27s 78ms/step - loss: 1.1778 - acc: 0.5903 - val_loss: 2.2063 - val_acc: 0.3673
+Epoch 7/50
+351/350 [==============================] - 27s 78ms/step - loss: 1.0649 - acc: 0.6336 - val_loss: 2.3058 - val_acc: 0.3827
+Epoch 8/50
+351/350 [==============================] - 28s 78ms/step - loss: 0.9749 - acc: 0.6658 - val_loss: 2.4770 - val_acc: 0.3488
+Epoch 9/50
+351/350 [==============================] - 28s 79ms/step - loss: 0.8857 - acc: 0.6951 - val_loss: 2.2301 - val_acc: 0.4047
+Epoch 10/50
+351/350 [==============================] - 27s 77ms/step - loss: 0.7896 - acc: 0.7295 - val_loss: 2.2231 - val_acc: 0.4301
+Epoch 11/50
+351/350 [==============================] - 29s 81ms/step - loss: 0.7172 - acc: 0.7535 - val_loss: 2.2253 - val_acc: 0.4316
+Epoch 12/50
+351/350 [==============================] - 27s 78ms/step - loss: 0.6597 - acc: 0.7727 - val_loss: 2.3508 - val_acc: 0.4260
+Epoch 13/50
+351/350 [==============================] - 27s 78ms/step - loss: 0.6010 - acc: 0.7918 - val_loss: 2.4019 - val_acc: 0.4427
+Epoch 14/50
+351/350 [==============================] - 28s 81ms/step - loss: 0.5449 - acc: 0.8106 - val_loss: 2.4426 - val_acc: 0.4530
+Epoch 15/50
+351/350 [==============================] - 28s 78ms/step - loss: 0.5017 - acc: 0.8269 - val_loss: 2.5559 - val_acc: 0.4238
+Epoch 16/50
+351/350 [==============================] - 27s 77ms/step - loss: 0.4557 - acc: 0.8406 - val_loss: 2.4825 - val_acc: 0.4416
+Epoch 17/50
+351/350 [==============================] - 27s 78ms/step - loss: 0.4168 - acc: 0.8545 - val_loss: 2.6936 - val_acc: 0.4333
+Epoch 18/50
+351/350 [==============================] - 27s 77ms/step - loss: 0.3915 - acc: 0.8630 - val_loss: 3.0217 - val_acc: 0.4024
+Epoch 19/50
+351/350 [==============================] - 28s 79ms/step - loss: 0.3488 - acc: 0.8761 - val_loss: 2.9144 - val_acc: 0.4233
+Epoch 20/50
+351/350 [==============================] - 28s 79ms/step - loss: 0.3266 - acc: 0.8863 - val_loss: 2.9281 - val_acc: 0.4531
+Epoch 21/50
+351/350 [==============================] - 27s 77ms/step - loss: 0.2883 - acc: 0.8987 - val_loss: 2.8108 - val_acc: 0.4391
+Epoch 22/50
+351/350 [==============================] - 27s 78ms/step - loss: 0.2762 - acc: 0.9029 - val_loss: 3.1648 - val_acc: 0.4410
+Epoch 23/50
+351/350 [==============================] - 27s 78ms/step - loss: 0.2493 - acc: 0.9123 - val_loss: 2.9422 - val_acc: 0.4556
+Epoch 24/50
+351/350 [==============================] - 26s 75ms/step - loss: 0.2322 - acc: 0.9197 - val_loss: 3.3367 - val_acc: 0.4482
+Epoch 25/50
+351/350 [==============================] - 28s 80ms/step - loss: 0.2183 - acc: 0.9244 - val_loss: 3.4464 - val_acc: 0.4420
+Epoch 26/50
+351/350 [==============================] - 28s 81ms/step - loss: 0.1976 - acc: 0.9312 - val_loss: 3.4382 - val_acc: 0.4530
+Epoch 27/50
+351/350 [==============================] - 29s 81ms/step - loss: 0.1927 - acc: 0.9328 - val_loss: 3.4870 - val_acc: 0.4312
+Epoch 28/50
+351/350 [==============================] - 28s 81ms/step - loss: 0.1828 - acc: 0.9368 - val_loss: 3.7586 - val_acc: 0.4271
+Epoch 29/50
+351/350 [==============================] - 28s 79ms/step - loss: 0.1948 - acc: 0.9324 - val_loss: 3.4027 - val_acc: 0.4446
+Epoch 30/50
+351/350 [==============================] - 29s 82ms/step - loss: 0.1549 - acc: 0.9467 - val_loss: 4.0064 - val_acc: 0.4234
+Epoch 31/50
+351/350 [==============================] - 24s 69ms/step - loss: 0.1663 - acc: 0.9415 - val_loss: 3.3275 - val_acc: 0.4474
+Epoch 32/50
+351/350 [==============================] - 28s 79ms/step - loss: 0.1402 - acc: 0.9507 - val_loss: 3.7337 - val_acc: 0.4317
+Epoch 33/50
+351/350 [==============================] - 29s 83ms/step - loss: 0.1349 - acc: 0.9520 - val_loss: 3.8235 - val_acc: 0.4476
+Epoch 34/50
+351/350 [==============================] - 29s 82ms/step - loss: 0.1391 - acc: 0.9528 - val_loss: 3.7448 - val_acc: 0.4423
+Epoch 35/50
+351/350 [==============================] - 27s 78ms/step - loss: 0.1293 - acc: 0.9561 - val_loss: 4.0522 - val_acc: 0.4416
+Epoch 36/50
+351/350 [==============================] - 27s 78ms/step - loss: 0.1118 - acc: 0.9611 - val_loss: 3.8810 - val_acc: 0.4434
+Epoch 37/50
+350/350 [============================>.] - ETA: 0s - loss: 0.1141 - acc: 0.9611^CTraceback (most recent call last):
+  File "05-01-19_Augmented.py", line 273, in <module>
+    verbose=1)
+  File "/usr/local/lib/python3.6/dist-packages/keras/legacy/interfaces.py", line 91, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/keras/engine/training.py", line 1418, in fit_generator
+    initial_epoch=initial_epoch)
+  File "/usr/local/lib/python3.6/dist-packages/keras/engine/training_generator.py", line 242, in fit_generator
+    verbose=0)
+  File "/usr/local/lib/python3.6/dist-packages/keras/engine/training.py", line 1113, in evaluate
+    steps=steps)
+  File "/usr/local/lib/python3.6/dist-packages/keras/engine/training_arrays.py", line 392, in test_loop
+    batch_outs = f(ins_batch)
+  File "/usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py", line 2715, in __call__
+    return self._call(inputs)
+  File "/usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py", line 2675, in _call
+    fetched = self._callable_fn(*array_vals)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py", line 1439, in __call__
+    run_metadata_ptr)
+KeyboardInterrupt
