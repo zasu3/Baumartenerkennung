@@ -1,0 +1,83 @@
+X_train shape: (5192, 200, 200, 3)
+5192 train samples
+1299 test samples
+Train on 5192 samples, validate on 1299 samples
+Epoch 1/25
+2018-10-10 20:51:59.961644: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 0 with properties: 
+name: Tesla V100-DGXS-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:07:00.0
+totalMemory: 31.73GiB freeMemory: 30.85GiB
+2018-10-10 20:52:00.324019: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 1 with properties: 
+name: Tesla V100-DGXS-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:08:00.0
+totalMemory: 31.74GiB freeMemory: 31.32GiB
+2018-10-10 20:52:00.690338: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 2 with properties: 
+name: Tesla V100-DGXS-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:0e:00.0
+totalMemory: 31.74GiB freeMemory: 31.32GiB
+2018-10-10 20:52:01.117640: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 3 with properties: 
+name: Tesla V100-DGXS-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:0f:00.0
+totalMemory: 31.74GiB freeMemory: 31.32GiB
+2018-10-10 20:52:01.117744: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0, 1, 2, 3
+2018-10-10 20:52:02.341467: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-10-10 20:52:02.341510: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 1 2 3 
+2018-10-10 20:52:02.341521: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N Y Y Y 
+2018-10-10 20:52:02.341530: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 1:   Y N Y Y 
+2018-10-10 20:52:02.341538: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 2:   Y Y N Y 
+2018-10-10 20:52:02.341546: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 3:   Y Y Y N 
+2018-10-10 20:52:02.343830: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 29938 MB memory) -> physical GPU (device: 0, name: Tesla V100-DGXS-32GB, pci bus id: 0000:07:00.0, compute capability: 7.0)
+2018-10-10 20:52:02.729575: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 30393 MB memory) -> physical GPU (device: 1, name: Tesla V100-DGXS-32GB, pci bus id: 0000:08:00.0, compute capability: 7.0)
+2018-10-10 20:52:03.119258: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 30393 MB memory) -> physical GPU (device: 2, name: Tesla V100-DGXS-32GB, pci bus id: 0000:0e:00.0, compute capability: 7.0)
+2018-10-10 20:52:03.540170: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 30393 MB memory) -> physical GPU (device: 3, name: Tesla V100-DGXS-32GB, pci bus id: 0000:0f:00.0, compute capability: 7.0)
+5192/5192 [==============================] - 28s 5ms/step - loss: 2.9629 - acc: 0.1315 - val_loss: 2.2760 - val_acc: 0.1617
+Epoch 2/25
+5192/5192 [==============================] - 12s 2ms/step - loss: 2.2175 - acc: 0.2126 - val_loss: 2.1516 - val_acc: 0.2379
+Epoch 3/25
+5192/5192 [==============================] - 12s 2ms/step - loss: 2.1002 - acc: 0.2835 - val_loss: 2.0192 - val_acc: 0.3079
+Epoch 4/25
+5192/5192 [==============================] - 12s 2ms/step - loss: 1.8996 - acc: 0.3596 - val_loss: 2.1633 - val_acc: 0.2540
+Epoch 5/25
+5192/5192 [==============================] - 12s 2ms/step - loss: 1.6979 - acc: 0.4476 - val_loss: 2.4062 - val_acc: 0.1540
+Epoch 6/25
+5192/5192 [==============================] - 12s 2ms/step - loss: 1.5640 - acc: 0.5135 - val_loss: 2.0098 - val_acc: 0.3310
+Epoch 7/25
+5192/5192 [==============================] - 12s 2ms/step - loss: 1.2239 - acc: 0.6373 - val_loss: 1.9952 - val_acc: 0.3595
+Epoch 8/25
+5192/5192 [==============================] - 12s 2ms/step - loss: 0.8995 - acc: 0.7390 - val_loss: 2.1410 - val_acc: 0.3549
+Epoch 9/25
+5192/5192 [==============================] - 12s 2ms/step - loss: 0.5747 - acc: 0.8473 - val_loss: 2.1088 - val_acc: 0.3795
+Epoch 10/25
+5192/5192 [==============================] - 12s 2ms/step - loss: 0.4007 - acc: 0.8910 - val_loss: 1.9088 - val_acc: 0.3726
+Epoch 11/25
+5192/5192 [==============================] - 11s 2ms/step - loss: 0.2620 - acc: 0.9370 - val_loss: 2.2406 - val_acc: 0.3865
+Epoch 12/25
+5192/5192 [==============================] - 12s 2ms/step - loss: 0.2237 - acc: 0.9411 - val_loss: 2.1266 - val_acc: 0.3872
+Epoch 13/25
+5192/5192 [==============================] - 12s 2ms/step - loss: 0.1429 - acc: 0.9615 - val_loss: 2.3764 - val_acc: 0.4088
+Epoch 14/25
+5192/5192 [==============================] - 11s 2ms/step - loss: 0.1115 - acc: 0.9701 - val_loss: 2.5459 - val_acc: 0.3872
+Epoch 15/25
+5192/5192 [==============================] - 12s 2ms/step - loss: 0.1137 - acc: 0.9678 - val_loss: 2.7623 - val_acc: 0.3526
+Epoch 16/25
+5192/5192 [==============================] - 12s 2ms/step - loss: 0.0855 - acc: 0.9782 - val_loss: 2.5200 - val_acc: 0.3526
+Epoch 17/25
+5192/5192 [==============================] - 11s 2ms/step - loss: 0.0877 - acc: 0.9771 - val_loss: 2.7233 - val_acc: 0.3895
+Epoch 18/25
+5192/5192 [==============================] - 12s 2ms/step - loss: 0.0669 - acc: 0.9807 - val_loss: 3.0186 - val_acc: 0.3533
+Epoch 19/25
+5192/5192 [==============================] - 11s 2ms/step - loss: 0.0839 - acc: 0.9750 - val_loss: 2.3971 - val_acc: 0.3818
+Epoch 20/25
+5192/5192 [==============================] - 11s 2ms/step - loss: 0.0616 - acc: 0.9842 - val_loss: 3.3873 - val_acc: 0.3572
+Epoch 21/25
+5192/5192 [==============================] - 11s 2ms/step - loss: 0.0551 - acc: 0.9848 - val_loss: 2.5825 - val_acc: 0.3726
+Epoch 22/25
+5192/5192 [==============================] - 11s 2ms/step - loss: 0.0544 - acc: 0.9863 - val_loss: 3.1556 - val_acc: 0.3541
+Epoch 23/25
+5192/5192 [==============================] - 11s 2ms/step - loss: 0.1513 - acc: 0.9611 - val_loss: 2.9170 - val_acc: 0.3449
+Epoch 24/25
+5192/5192 [==============================] - 10s 2ms/step - loss: 0.0445 - acc: 0.9892 - val_loss: 2.9473 - val_acc: 0.3626
+Epoch 25/25
+5192/5192 [==============================] - 12s 2ms/step - loss: 0.0402 - acc: 0.9900 - val_loss: 3.2306 - val_acc: 0.3764
+Test loss: 3.2305601771929524
+Test accuracy: 0.3764434179450293
